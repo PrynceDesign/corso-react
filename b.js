@@ -8,15 +8,23 @@ function move(dir) {
   // attenzione alle variabili undefinded
   // la if se trova il valore lo 0 lo interpreta come falso
   // se trova un valore sopra lo 0 lo interpreta come vero
-  if (dir === 0) {
+  switch (dir) {
+    case 0:
     left = 10;
-  } else if (dir === 1) {
+    break;
+    case 1:
     left = -10;
-  } else if (dir === 2) {
-    up = -10;
-  } else {
+    break;
+    case 2:
+      up = -10;
+    break;
+    case 3:
     up = 10;
+    break;
+    default:
+      alert("il valore dir non è valido dir = " + dir)
   }
+ 
 
   // la if di prima ma scritta abbreviato
   //const val = dir === 0 ? 10 : -10;
